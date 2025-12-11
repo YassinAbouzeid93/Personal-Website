@@ -1,0 +1,213 @@
+header {
+    background: #14532D; /* Keep a professional blue-green */
+    color: #f4f4f4;
+    padding: 20px 40px; /* Adjust horizontal padding for balance */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; /* Set a consistent height */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+     /* Adds subtle shadow */
+}
+.body-container{
+    font-family:  sans-serif;
+    color: #343a40;
+    margin: 0 , auto;
+    margin-top: 0;
+    padding: 5px;
+    background-color: #f4f4f4;
+    text-align: center;
+    max-width: 5000px;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+}
+.name h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding: 0;
+}
+.name h6{
+    font-size: 16px;
+   font-weight: 400;
+    opacity: 0.8;
+    margin: 0;
+
+}
+
+.navi{
+    text-align: center;
+    align-self: center;
+    flex-grow: 0;
+    
+}
+.navi ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between menu items */
+}
+
+.navi ul li {
+    display: inline-block;
+}
+
+.navi ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navi ul li a:hover {
+    color: #ffcc00; /* Soft gold/yellow hover effect */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Ensure the category navigation appears below the header */
+.category-nav {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 20px;
+  
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+/* Style the category buttons */
+.category-btn.active {
+    background: #5c940d; /* Darker green when selected */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+.category-btn {
+    background: #14532D; /* Green to match the header */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.category-btn:hover {
+    background: #5c940d; /* Darker green on hover */
+}
+
+
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* âœ… Two columns: Content (left) | Buttons (right) */
+    align-items: start; /* Aligns content at the top */
+    gap: 25px; /* Space between columns */
+    border: 2px solid #14532D;
+    padding: 20px;
+  
+   
+    margin: auto;
+}
+
+/* âœ… Project Content (right Side) */
+#project-content {
+    display: grid;
+    grid-template-columns: 2fr ;
+    width: 1300PX;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 300px; /* âœ… Minimum height */
+    max-height: 500px; /* âœ… Restricts height */
+    overflow-y: auto; /* âœ… Enables scrolling when content overflows */
+    border: 2px solid #14532D; /* âœ… Adds a visible border */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* âœ… Subtle shadow for depth */
+    scrollbar-width: thin; /* âœ… Makes scrollbar smaller (for Firefox) */
+    scrollbar-color: #14532D #ddd; /* âœ… Custom scrollbar color */
+}
+
+/* âœ… Project List Container (Right Side) */
+#project-list {
+    display: flex;
+    flex-direction: column; /* âœ… Ensures buttons stack */
+    gap: 10px; /* Space between buttons */
+    align-items:center;
+}
+
+/* âœ… Style for project buttons */
+.project-list-button {
+    background: #14532D;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50%; /* âœ… Makes each button take full width */
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* âœ… Hover effect */
+.project-list-button:hover {
+    background: #5c940d;
+    transform: scale(1.05);
+}
+
+/* âœ… Active (click) effect */
+.project-list-button.active {
+    background: #5c940d;
+    transform: scale(1.05);
+}
+/* âœ… Hide lightbox by default */
+#lightbox {
+    display: none; /* âœ… Hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* âœ… Dark background overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* âœ… Style for the expanded image */
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* âœ… Close effect */
+#lightbox:after {
+    content: "âœ–"; /* Close button */
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+
+footer {
+    background: #14532D;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    opacity: 0.8;
+}
